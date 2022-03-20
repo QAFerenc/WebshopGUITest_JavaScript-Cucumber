@@ -17,9 +17,9 @@ Running video :  https://www.youtube.com/watch?v=vWN0ewVPw2Q
 
 Code :
 
-  The code follows the Page Object Model (POM) design pattern :    - Feature file
-                                                                   - Test Step files
-                                                                   - Page files
+  The code follows the Page Object Model (POM) design pattern :    - Feature file (features\web_test.js)
+                                                                   - Test Step files (features\step-definitions\*.js)
+                                                                   - Page files (features\pages\*.js)
 
   According to the URL endings in the different pages of the test process, we can identify the following file names :
 
@@ -29,7 +29,7 @@ Code :
                          
                           
                         
-  The listed html pages are projected to "test step" and "page files", as ::
+  The listed html pages are projected to "test step" and "page files", as :
 
     index.html ->  main_page_operations.js   ,   main_page.js
     prod.html  ->  product_page_operations.js,   product_page.js
