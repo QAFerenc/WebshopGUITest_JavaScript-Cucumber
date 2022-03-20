@@ -16,7 +16,7 @@ When('Customer clicks Button Place Order',  async() => {
 })
 
 When('Customer fills in field Name as {string}',  async(name) => {
-await browser.pause(500);
+    await browser.pause(500);
     const elem = await $("//*[@id='name']");
     await elem.waitForEnabled()
     await elem.click();
@@ -24,7 +24,7 @@ await browser.pause(500);
 })
 
 When('Customer fills in field Country as {string}',  async(country) => {
-await browser.pause(500);
+    await browser.pause(500);
     const elem =  await $("//*[@id='country']");
     await elem.waitForEnabled()
     await elem.click();
@@ -37,7 +37,6 @@ When('Customer fills in field City as {string}',  async(city) => {
     await elem.click();
     await elem.setValue(city)
 })
-
 
 When('Customer fills in field Card as {string}',  async(card) => {
     const elem = await $("//*[@id='card']");
@@ -73,8 +72,6 @@ Then('Customer clicks Close button',  async() => {
     await elem.waitForEnabled()
     await elem.click();
 })
-
-
 
 Then('Match price as {string} with purchased amount', async(price) => {
 
