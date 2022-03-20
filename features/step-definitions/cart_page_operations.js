@@ -14,7 +14,6 @@ When('Customer deletes last element',  async() => {
 })
 
 When('Customer fills in field Name as {string}',  async(name) => {
-    await browser.pause(500);
     const elem = await $("//*[@id='name']");
     await elem.waitForEnabled()
     await elem.click();
@@ -22,7 +21,6 @@ When('Customer fills in field Name as {string}',  async(name) => {
 })
 
 When('Customer fills in field Country as {string}',  async(country) => {
-    await browser.pause(500);
     const elem =  await $("//*[@id='country']");
     await elem.waitForEnabled()
     await elem.click();
