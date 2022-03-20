@@ -22,8 +22,8 @@ Scenario Outline: Loading webpage
   When Customer fills in field Month as "<month>"
   When Customer fills in field Year as "<year>"
   When Customer clicks Purchase Button
-  When Customer clicks Close button
-  Then Match price as "<price_of_laptop1>" with purchased amount 
+  When Customer clicks Close button 
+  Then Match price as "<price_of_laptop_1>" with purchased amount 
 Examples:
 |category| laptop_1    | laptop_2    |  price_of_laptop_1 |name     |  country | city     | card            |  month | year |
 |Laptops| Sony vaio i5 | Dell i7 8gb |        790         |  Ferenc | Budapest | Hungary  | 1234567890123456|   03   | 2022 |
