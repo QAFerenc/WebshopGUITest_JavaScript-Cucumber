@@ -13,10 +13,6 @@ When('Customer deletes last element',  async() => {
     await browser.pause(2000);
 })
 
-When('Customer clicks Button Place Order',  async() => {
-    CartPage.pressButton("Place Order")
-})
-
 When('Customer fills in field Name as {string}',  async(name) => {
     await browser.pause(500);
     const elem = await $("//*[@id='name']");
