@@ -20,14 +20,7 @@ When('Customer picks laptop as {string}', async(laptop)  =>  {
      await MainPage.pressButton(laptop)
 })
 
-When('Customer clicks Home',  async() => {
-    const elem = await $("//*[@id='navbarExample']/ul/li[1]/a");
-    await elem.click();
-})
 
-When('Customer clicks Cart',  async() => {
-    ProductPage.pressButton("Add to cart")
-})
 
 
 
