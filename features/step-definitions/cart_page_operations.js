@@ -67,13 +67,18 @@ When('Customer clicks Purchase Button',  async() => {
     await elem.click();
 })
 
-Then('Customer clicks Close button',  async() => {
+When('Customer clicks Close button',  async() => {
     const elem = await $("//*[@id=\"orderModal\"]/div/div/div[3]/button[1]");
     await elem.waitForEnabled()
     await elem.click();
 })
 
 Then('Match price as {string} with purchased amount', async(price) => {
-
-
+    const elem = await $("/html/body/div[9]/p");
+    await elem.waitForDisplayed();
+    str = await elem.getText();
+    str = await str.substring(str.indexOf('Amount'),str.indexOf('Card Number'));
+    await console.log(str);
+    await console.log(price);
+    assert(str.includes(price))
 })
