@@ -21,7 +21,7 @@ Code :
                                                                    - Test Step files
                                                                    - Page files
 
-  According to the URL endings in the different pages of the test process, we can identify the followings :
+  According to the URL endings in the different pages of the test process, we can identify the following file names :
 
                          index.html
                          prod.html
@@ -29,7 +29,7 @@ Code :
                          
                           
                         
-  The listed html pages are projected to test step and page files, as ::
+  The listed html pages are projected to "test step" and "page files", as ::
 
     index.html ->  main_page_operations.js   ,   main_page.js
     prod.html  ->  product_page_operations.js,   product_page.js
