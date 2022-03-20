@@ -16,12 +16,5 @@ When('Customer accepts Alert', async() => {
 
 })
 
-When('Customer clicks Button Add to Cart',  async() => {
-     ProductPage.pressButton("Add to cart")
 
-})
-
-When('Customer clicks Button Accept Alert',  () => {
-    browser.acceptAlert();
-})
 
