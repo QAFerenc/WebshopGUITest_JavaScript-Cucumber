@@ -3,6 +3,8 @@ const MainPage = require('../pages/main.page');
 const ProductPage = require('../pages/product.page');
 const CartPage = require('../pages/cart.page');
 
+const assert = require("assert");
+
 When('Customer deletes last element',  async() => {
     await browser.pause(2000);
     const elem = await $("//*[@id='tbodyid']/tr[2]/td[4]/a");
