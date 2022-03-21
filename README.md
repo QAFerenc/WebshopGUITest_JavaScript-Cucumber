@@ -35,7 +35,7 @@ Code :
 
     index.html ->  main_page_steps.js   ,   main_page.js
     prod.html  ->  product_page_steps.js,   product_page.js
-    cart.htnl  ->  cart_page_steps.js   ,   cart_page.js     
+    cart.html  ->  cart_page_steps.js   ,   cart_page.js     
   
   
   The page related test step and page files are inherited from base files (base_page_steps.js and base_page.js)
