@@ -10,8 +10,8 @@ When('Customer deletes index as {string} products as {string}',  async(index, pr
     ind = parseInt(index) - 1
     product = await products.split(",")[ind]
     
-    first_element_in_basket = await $("//*[@id='tbodyid']/tr[1]/td[2]");
-    second_element_in_basket = await $("//*[@id='tbodyid']/tr[2]/td[2]");
+    first_element_in_basket = await $(CartPage.firstElementInBasket);
+    second_element_in_basket = await $(CartPage.secondElementInBasket);
 
     await console.log(product);
     txt1 = await first_element_in_basket.getText();
@@ -23,13 +23,13 @@ When('Customer deletes index as {string} products as {string}',  async(index, pr
 
         // normally the laptop picked last time (Dell i7 8gb) is the 2nd element in the list
 
-        await CartPage.pressButtonWithLocator("//*[@id='tbodyid']/tr[2]/td[4]/a")
+        await CartPage.pressButtonWithLocator(CartPage.deleteSecondElementButton)
     }
     else if(product.includes(txt1)) {
 
         // but it can happen, that the laptop picked last time is on the top of the basket (1st element in the list)
   
-        await CartPage.pressButtonWithLocator("//*[@id='tbodyid']/tr[1]/td[4]/a")
+        await CartPage.pressButtonWithLocator(CartPage.deleteFirstElementButton)
     }
 
 
@@ -61,7 +61,7 @@ When('Customer fills in field Year as {string}',  async(year) => {
 })
 
 When('Customer clicks Purchase Button',  async() => {
-    await CartPage.pressButtonWithLocator("//*[@id='orderModal']/div/div/div[3]/button[2]")
+    await CartPage.pressButtonWithLocator(CartPage.purchaseButton)
 })
 
 When('Customer clicks Close button',  async() => {
