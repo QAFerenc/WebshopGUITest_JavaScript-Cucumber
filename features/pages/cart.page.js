@@ -12,6 +12,7 @@ class CartPage extends BasePage {
     get deleteFirstElementButton()         { return "//*[@id='tbodyid']/tr[1]/td[4]/a"}
     get deleteSecondElementButton()        { return "//*[@id='tbodyid']/tr[2]/td[4]/a"}
     get purchaseButton()                   { return "//*[@id='orderModal']/div/div/div[3]/button[2]" }
+    get priceRow()                         { return "/html/body/div[9]/p"}
     
 
 }
