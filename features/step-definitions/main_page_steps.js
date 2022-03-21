@@ -14,7 +14,7 @@ When('Customer selects category as {string}',  async(category)  =>  {
     await MainPage.pressButton(category)
 })
 
-// the whole list of possible laptops are input parameters, and one of them is selected according to the value of index
+// the whole list of laptops are input parameters, and one of them is selected according to the value of index
 
 When('Customer picks index as {string} laptops as {string}', async(index,laptops)  =>  {
      ind = parseInt(index) - 1
