@@ -11,13 +11,11 @@ Given('A webpage as {string}', async(page) => {
 })
 
 When('Customer selects category as {string}',  async(category)  =>  {
-    //  browser.fullscreenWindow()
-    //  browser.pause(5000)
-      await MainPage.pressButton(category)
+    await MainPage.pressButton(category)
 })
 
 When('Customer picks laptop as {string}', async(laptop)  =>  {
-     await MainPage.pressButton(laptop)
+    await MainPage.pressButton(laptop)
 })
 
 
