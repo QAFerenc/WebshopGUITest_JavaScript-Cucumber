@@ -27,7 +27,7 @@ When('Customer deletes index as {string} products as {string}',  async(index, pr
     }
     else if(product.includes(txt1)) {
 
-        // but it can happen, that the laptop picked last time is on the top of the basket (1st element in the list)
+        // but it can happen, that the laptop picked last time is on the top of the basket (first element in the list)
   
         await CartPage.pressButtonWithLocator(CartPage.deleteFirstElementButton)
     }
