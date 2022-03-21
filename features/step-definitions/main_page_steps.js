@@ -14,8 +14,12 @@ When('Customer selects category as {string}',  async(category)  =>  {
     await MainPage.pressButton(category)
 })
 
-When('Customer picks laptop as {string}', async(laptop)  =>  {
-    await MainPage.pressButton(laptop)
+// the whole list of possible laptops are input parameters, and one of them is selected according to the value of index
+
+When('Customer picks index as {string} laptops as {string}', async(index,laptops)  =>  {
+     ind = parseInt(index) - 1
+     laptop = await laptops.split(",")[ind]
+     await MainPage.pressButton(laptop)
 })
 
 
