@@ -5,13 +5,6 @@ const CartPage = require('../pages/cart.page');
 
 const assert = require("assert");
 
-When('Customer deletes last element',  async() => {
-    await browser.pause(2000);
-    await CartPage.pressButtonWithLocator("//*[@id='tbodyid']/tr[2]/td[4]/a")
-    await browser.pause(2000);
-})
-
-
 When('Customer deletes index as {string} products as {string}',  async(index, products) => {
     await browser.pause(2000);
     ind = parseInt(index) - 1
@@ -72,7 +65,7 @@ When('Customer clicks Purchase Button',  async() => {
 })
 
 When('Customer clicks Close button',  async() => {
-    await CartPage.pressButtonWithLocator("//*[@id=\"orderModal\"]/div/div/div[3]/button[1]");
+    await CartPage.pressButtonWithLocator(CartPage.closeButton);
 })
 
 Then('Match index as {string} prices as {string} with purchased amount', async(index,prices) => {
