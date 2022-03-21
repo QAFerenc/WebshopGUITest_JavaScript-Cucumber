@@ -33,7 +33,7 @@ Code :
                         
   The listed html pages are projected to "test step" and "page files", as :
 
-    index.html ->  main_page_operations.js   ,   main_page.js
-    prod.html  ->  product_page_operations.js,   product_page.js
-    cart.htnl  ->  cart_page_operations.js   ,   cart_page.js     
+    index.html ->  main_page_steps.js   ,   main_page.js
+    prod.html  ->  product_page_steps.js,   product_page.js
+    cart.htnl  ->  cart_page_steps.js   ,   cart_page.js     
   
