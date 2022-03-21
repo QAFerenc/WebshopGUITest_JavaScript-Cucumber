@@ -1,19 +1,19 @@
-Feature: To test a website
+Feature: Testing of Demoblaze's website
 
 
 Scenario Outline: Loading webpage
   Given A webpage as "https://www.demoblaze.com/index.html"
   When Customer selects category as "<category>"
-  When Customer picks laptop as "<laptop_1>"
+  When Customer picks index as "1" laptops as "<laptops>"
   When Customer clicks button as "Add to cart"
   When Customer accepts Alert
   When Customer clicks button as "Home"
   When Customer selects category as "<category>"
-  When Customer picks laptop as "<laptop_2>"
+  When Customer picks index as "2" laptops as "<laptops>"
   When Customer clicks button as "Add to cart"
   When Customer accepts Alert
   When Customer clicks button as "Cart"
-  When Customer deletes last element 
+  When Customer deletes index as "2" products as "<laptops>" 
   When Customer clicks button as "Place Order"
   When Customer fills in field Name as "<name>"
   When Customer fills in field Country as "<country>"
@@ -22,7 +22,7 @@ Scenario Outline: Loading webpage
   When Customer fills in field Month as "<month>"
   When Customer fills in field Year as "<year>"
   When Customer clicks Purchase Button
-  When Customer clicks Close button 
+  When Customer clicks Close button
   Then Match index as "1" prices as "<prices_of_laptops>" with purchased amount 
 Examples:
 |category| laptops                  |   prices_of_laptops      |name     |  country | city     | card            |  month | year |
