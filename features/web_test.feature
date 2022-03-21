@@ -23,10 +23,10 @@ Scenario Outline: Loading webpage
   When Customer fills in field Year as "<year>"
   When Customer clicks Purchase Button
   When Customer clicks Close button 
-  Then Match price as "<price_of_laptop_1>" with purchased amount 
+  Then Match index as "1" prices as "<prices_of_laptops>" with purchased amount 
 Examples:
-|category| laptop_1    | laptop_2    |  price_of_laptop_1 |name     |  country | city     | card            |  month | year |
-|Laptops| Sony vaio i5 | Dell i7 8gb |        790         |  Ferenc | Budapest | Hungary  | 1234567890123456|   03   | 2022 |
+|category| laptops                  |   prices_of_laptops      |name     |  country | city     | card            |  month | year |
+|Laptops | Sony vaio i5,Dell i7 8gb |          790,700        |  Ferenc | Budapest | Hungary  | 1234567890123456|   03   | 2022 |
 
 
   
