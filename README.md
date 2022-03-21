@@ -15,6 +15,8 @@ Test Execution :
     
 Running video :  https://www.youtube.com/watch?v=vWN0ewVPw2Q
 
+Reporting     : Allure
+
 Code :
 
   The code follows the Page Object Model (POM) design pattern :    - Feature file (features\web_test.js)
