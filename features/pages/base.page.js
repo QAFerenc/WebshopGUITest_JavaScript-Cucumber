@@ -6,18 +6,31 @@ module.exports = class BasePage {
 
     }
 
-    async pressButton(button)  {
+    async pressButton (button)  {
+       
         const elem = await $("//*[contains(text(),'"+button+"')]")
         await elem.waitForEnabled();
         await elem.click();
+
     }
-    
-   async fillInEditBox(locator, value) {
+
+    async pressButtonWithLocator (locator)  {
+       
+        const elem = await $(locator)
+        await elem.waitForEnabled();
+        await elem.click();
+
+    }
+
+
+
+    async fillInEditBox(locator, value)
+    {
         const elem =  await $(locator);
         await elem.waitForEnabled()
         await elem.click();
         await elem.setValue(value)
-   }
+    }
 
 }
 
