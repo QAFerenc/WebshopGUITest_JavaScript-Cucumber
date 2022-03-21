@@ -49,12 +49,19 @@ When('Customer clicks Close button',  async() => {
     await elem.click();
 })
 
-Then('Match price as {string} with purchased amount', async(price) => {
+Then('Match index as {string} prices as {string} with purchased amount', async(index,prices) => {
+
+    // the price for the product is indexed in the list of price_of_laptops
+
+    ind = parseInt(index) - 1
+    price = await prices.split(",")[ind]   
     const elem = await $("/html/body/div[9]/p");
     await elem.waitForDisplayed();
-    str = await elem.getText();
+    str = await elem.getText();  
     str = await str.substring(str.indexOf('Amount'),str.indexOf('Card Number'));
     await console.log(str);
     await console.log(price);
+
+    // make the price comparison, and evalute the result with assert
     assert(str.includes(price))
 })
