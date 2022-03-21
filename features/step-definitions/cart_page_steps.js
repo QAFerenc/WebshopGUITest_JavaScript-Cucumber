@@ -74,7 +74,7 @@ Then('Match index as {string} prices as {string} with purchased amount', async(i
 
     ind = parseInt(index) - 1
     price = await prices.split(",")[ind]   
-    const elem = await $("/html/body/div[9]/p");
+    const elem = await $(CartPage.priceRow);
     await elem.waitForDisplayed();
     str = await elem.getText();  
     str = await str.substring(str.indexOf('Amount'),str.indexOf('Card Number'));
