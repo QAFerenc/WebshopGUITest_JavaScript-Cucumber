@@ -15,7 +15,7 @@ Test Execution :
     
 Running video :  https://www.youtube.com/watch?v=vWN0ewVPw2Q
 
-Reporting     : Allure
+Reporting     : Allure  (https://webdriver.io/docs/allure-reporter/)
 
 Code :
 
@@ -31,9 +31,11 @@ Code :
                          
                           
                         
-  The listed html pages are projected to "test step" and "page files", as :
+  The listed html pages are projected to "test step" and "page" files, as :
 
     index.html ->  main_page_steps.js   ,   main_page.js
     prod.html  ->  product_page_steps.js,   product_page.js
     cart.htnl  ->  cart_page_steps.js   ,   cart_page.js     
   
+  
+  The page related test step and page files are inherited from base files (base_page_steps.js and base_page.js)
