@@ -7,9 +7,39 @@ const assert = require("assert");
 
 When('Customer deletes last element',  async() => {
     await browser.pause(2000);
-    const elem = await $("//*[@id='tbodyid']/tr[2]/td[4]/a");
-    await elem.waitForEnabled();
-    await elem.click();
+    await CartPage.pressButtonWithLocator("//*[@id='tbodyid']/tr[2]/td[4]/a")
+    await browser.pause(2000);
+})
+
+
+When('Customer deletes index as {string} products as {string}',  async(index, products) => {
+    await browser.pause(2000);
+    ind = parseInt(index) - 1
+    product = await products.split(",")[ind]
+    
+    first_element_in_basket = await $("//*[@id='tbodyid']/tr[1]/td[2]");
+    second_element_in_basket = await $("//*[@id='tbodyid']/tr[2]/td[2]");
+
+    await console.log(product);
+    txt1 = await first_element_in_basket.getText();
+    txt2 = await second_element_in_basket.getText();
+    await console.log(txt1);
+    await console.log(txt2);
+
+    if(product.includes(txt2)) {
+
+        // normally the laptop picked last time (Dell i7 8gb) is the 2nd element in the list
+
+        await CartPage.pressButtonWithLocator("//*[@id='tbodyid']/tr[2]/td[4]/a")
+    }
+    else if(product.includes(txt1)) {
+
+        // but it can happen, that the laptop picked last time is on the top of the basket (1st element in the list)
+  
+        await CartPage.pressButtonWithLocator("//*[@id='tbodyid']/tr[1]/td[4]/a")
+    }
+
+
     await browser.pause(2000);
 })
 
@@ -38,15 +68,11 @@ When('Customer fills in field Year as {string}',  async(year) => {
 })
 
 When('Customer clicks Purchase Button',  async() => {
-    const elem = await $("//*[@id='orderModal']/div/div/div[3]/button[2]");
-    await elem.waitForEnabled()
-    await elem.click();
+    await CartPage.pressButtonWithLocator("//*[@id='orderModal']/div/div/div[3]/button[2]")
 })
 
 When('Customer clicks Close button',  async() => {
-    const elem = await $("//*[@id=\"orderModal\"]/div/div/div[3]/button[1]");
-    await elem.waitForEnabled()
-    await elem.click();
+    await CartPage.pressButtonWithLocator("//*[@id=\"orderModal\"]/div/div/div[3]/button[1]");
 })
 
 Then('Match index as {string} prices as {string} with purchased amount', async(index,prices) => {
@@ -62,6 +88,6 @@ Then('Match index as {string} prices as {string} with purchased amount', async(i
     await console.log(str);
     await console.log(price);
 
-    // make the price comparison, and evalute the result with assert
+    // make the price comparison  
     assert(str.includes(price))
 })
