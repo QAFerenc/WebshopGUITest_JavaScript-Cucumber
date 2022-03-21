@@ -11,7 +11,7 @@ Setting up development tools visit : https://docs.getxray.app/display/XRAY/Testi
          
 Test Execution : 
 
-    The test can be executed from the main directory (level of wdio.conf.js) :   npx wdio run wdio.conf.jus
+    The test can be executed from the main directory (level of wdio.conf.js) :   npx wdio run wdio.conf.js
     
 Running video :  https://www.youtube.com/watch?v=vWN0ewVPw2Q
 
