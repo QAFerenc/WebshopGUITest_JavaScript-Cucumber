@@ -7,13 +7,6 @@ class CartPage extends BasePage {
     get delete_second_element_locator () { return $('//*[@id="tbodyid"]/tr[2]/td[4]/a') }
     get amount_locator()    { return $('/html/body/div[9]/p/text()[2]') }
 
-    /*placeOrder(button) {
-
-        super.pressButton(button)
-
-    }
-*/
-
 }
 
 module.exports = new CartPage();
