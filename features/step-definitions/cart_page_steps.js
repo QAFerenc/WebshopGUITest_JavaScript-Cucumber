@@ -70,7 +70,7 @@ When('Customer clicks Close button',  async() => {
 
 Then('Match index as {string} prices as {string} with purchased amount', async(index,prices) => {
 
-    // the price for the product is indexed in the list of price_of_laptops
+    // all the prices are input parameters, the price for the product is indexed in the list of price_of_laptops
 
     ind = parseInt(index) - 1
     price = await prices.split(",")[ind]   
