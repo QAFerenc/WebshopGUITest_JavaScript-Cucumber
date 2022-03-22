@@ -4,7 +4,7 @@ This test task is part of an interviewing process
 Environment :
 
     Development tools :  WebdriverIO, Cucumber
-    Operating system  :  Windows 10
+    Operating system  :  Microsoft Windows 10 Pro (version : 10.0.19042)
     Browser           :  99.0.4844.74
  
 Setting up development tools visit : https://docs.getxray.app/display/XRAY/Testing+using+WebDriverIO+and+Cucumber+in+JavaScript
