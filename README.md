@@ -3,17 +3,18 @@ This test task is part of an interviewing process
 
 Environment :
 
-    Development tools :  WebdriverIO, Cucumber
+    Development tools :  WebdriverIO, Cucumber, nodejs
     Operating system  :  Microsoft Windows 10 Pro (version : 10.0.19042)
     Browser           :  99.0.4844.74
  
 Setting up development tools visit : https://docs.getxray.app/display/XRAY/Testing+using+WebDriverIO+and+Cucumber+in+JavaScript
+
+Running video :  https://www.youtube.com/watch?v=vWN0ewVPw2Q
          
-Test Execution : 
+Test Execution from node.js command line : 
 
     The test can be executed from the main directory (level of wdio.conf.js) :   npx wdio run wdio.conf.js
     
-Running video :  https://www.youtube.com/watch?v=vWN0ewVPw2Q
 
 Reporting     : Allure  (https://webdriver.io/docs/allure-reporter/)
 
