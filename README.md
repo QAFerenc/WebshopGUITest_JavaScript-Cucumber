@@ -11,7 +11,7 @@ For setting up development tools visit : https://docs.getxray.app/display/XRAY/T
 
 Running video :  https://www.youtube.com/watch?v=vWN0ewVPw2Q
 
-Screenshot    : screenshots\test_result.png
+Screenshot    : screenshots\test_results.png
          
 Test Execution from node.js command line : 
 
