@@ -7,7 +7,7 @@ Environment :
     Operating system  :  Microsoft Windows 10 Pro (version : 10.0.19042)
     Browser           :  99.0.4844.74
  
-Setting up development tools visit : https://docs.getxray.app/display/XRAY/Testing+using+WebDriverIO+and+Cucumber+in+JavaScript
+For setting up development tools visit : https://docs.getxray.app/display/XRAY/Testing+using+WebDriverIO+and+Cucumber+in+JavaScript
 
 Running video :  https://www.youtube.com/watch?v=vWN0ewVPw2Q
          
