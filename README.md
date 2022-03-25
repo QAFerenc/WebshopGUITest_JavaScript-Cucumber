@@ -1,4 +1,4 @@
-# Webshop automated test (Tehcnology : Javascript, WebdriverIO, Selenium, Cucumber) 
+# Webshop automated test (Technology : Javascript, WebdriverIO, Selenium, Cucumber) 
 
 Task : 
 
